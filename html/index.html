@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch-Time</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+    let a;
+    let date;
+    let time;
+    const options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+
+setInterval(() => {
+    a = new Date;
+    date = a.toLocaleDateString(undefined, options);
+    time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+
+    if(a.getMinutes() < 10){
+        time = a.getHours() + ':' +'0'+a.getMinutes() + ':' + a.getSeconds();
+    }
+    if(a.getSeconds() < 10){
+        time = a.getHours() + ':' +a.getMinutes() + ':' +'0'+a.getSeconds();
+    }
+
+    document.getElementById("time").innerHTML = time + ' on ' + date;
+    
+}, 1000);
+    </script>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Time Tool</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="time-dialog">
+                <h1>Current Time : <span id="time"></span></h1>
+                <small class="move">This is the time dialog box</small>
+                <hr>
+                <small class="move">You can change the time zone as you required</small>
+                <button class="move">Browse Time</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
