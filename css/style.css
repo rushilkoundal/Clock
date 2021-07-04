@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgb(241, 239, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+}
+
+body{
+    background-color: rgb(247, 241, 241);
+}
+nav ul li{
+    list-style: none;
+    font-weight: 900;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: xx-large;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+.time-dialog{
+    width: 50vw;
+    height: 25vh;
+    background-color: rgb(247, 241, 241);  
+    border-radius: 2px;  
+    margin-top: 10vh;
+}
+
+h1{
+    margin: 2px 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+hr{
+    width: 48vw;
+    margin: 0 10px;
+}
+
+.move{
+    margin: 5px 10px;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+}
